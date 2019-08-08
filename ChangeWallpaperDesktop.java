@@ -28,7 +28,6 @@ public class ChangeWallpaperDesktop {
 	private static void changeBackGroundDesktop() {
 		Random rand = new Random();
 		int randomNumber =  rand.nextInt((10 - 1) + 1) + 1;		
-		System.out.println(randomNumber);
 		String path = "C:\\Users\\DevMind\\Pictures\\images\\" + randomNumber + ".jpg";
 		User32.INSTANCE.SystemParametersInfo(0x0014, 0, path , 1);			
 	}
