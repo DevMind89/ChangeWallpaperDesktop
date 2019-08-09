@@ -18,7 +18,7 @@ public class ChangeWallpaperDesktop {
 		
 		final Runnable execution = new Runnable() {
 			public void run() {
-				  changeBackGroundDesktop();
+			    changeBackGroundDesktop();
 			}
 		};
 		ScheduledExecutorService timer = Executors.newSingleThreadScheduledExecutor();
