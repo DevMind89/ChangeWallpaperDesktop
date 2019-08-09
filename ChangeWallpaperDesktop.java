@@ -22,13 +22,13 @@ public class ChangeWallpaperDesktop {
 			}
 		};
 		ScheduledExecutorService timer = Executors.newSingleThreadScheduledExecutor();
-		timer.scheduleAtFixedRate(execution, 5, 5, TimeUnit.SECONDS);
+		timer.scheduleAtFixedRate(execution, 10, 10, TimeUnit.SECONDS);
 	}
 
 	private static void changeBackGroundDesktop() {
 		Random rand = new Random();
 		int randomNumber =  rand.nextInt((10 - 1) + 1) + 1;		
-		String path = "C:\\Users\\DevMind\\Pictures\\images\\" + randomNumber + ".jpg";
+		String path = System.getProperty("user.home") + "\\Pictures\\backgroundImages\\" + randomNumber + ".jpg";
 		User32.INSTANCE.SystemParametersInfo(0x0014, 0, path , 1);			
 	}
  }
